@@ -1,0 +1,14 @@
+for (int i = 0; i < candidate.length; i++) {
+    for (int j = 1; j < candidate.length; j++) {
+
+      if (candidate[j] < candidate[i]) {
+        System.out.println(candidate[j]+ " "+candidate[i]);
+        if(!tracking.contains(dictionary.get(j))) {
+          tracking.add(dictionary.get(j));
+          System.out.println(dictionary.get(j));
+          writeOut.add(space+dictionary.get(j)+" removed");
+        }
+        min[i] = j;
+      }
+    }
+}
